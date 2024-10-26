@@ -28,26 +28,10 @@ Node-Red - Flow
 
 
 
-Node-Red - MQTT
 
-Node-Red - Gráfico
 
 Node-Red - UI
 http://ec2-52-14-56-16.us-east-2.compute.amazonaws.com:1880/ui
 
-Monitoramento em tempo real
 
-
-JSONs
-ESP32 - MQTT
-
-
-Simulação Wokwi
-Os circuitos estão simulados na plataforma Wokwi e podem ser acessados através do link abaixo: https://wokwi.com/projects/411449430671253505
-
-Simulação da montagem do projeto
-Wokwi - Projeto 01
-
-Simulação do projeto em execução
-Wokwi - Projeto 02
 
