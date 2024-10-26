@@ -1,6 +1,6 @@
 # IoT - Sistema de Identificação de Som
 
-Desenvolvido por Leonardo Cupari - leonardo.cupari@aluno.ifsp.edu.br / Classio Gabriel da Silva - rodrigo.betussi@aluno.ifsp.edu.br
+Desenvolvido por Leonardo Cupari - leonardo.cupari@aluno.ifsp.edu.br / Classio Gabriel da Silva - classio.g@aluno.ifsp.edu.br
 
 Projeto de Trabalho de Conclusão da Disciplina de Plataformas de Prototipação para IoT (E2PPT) - IFSP CTD
 
