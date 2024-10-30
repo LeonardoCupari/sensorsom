@@ -4,7 +4,7 @@ Desenvolvido por Leonardo Cupari - leonardo.cupari@aluno.ifsp.edu.br / Classio G
 
 Projeto de Trabalho de Conclusão da Disciplina de Plataformas de Prototipação para IoT (E2PPT) - IFSP CTD
 
-Visão Geral
+# Visão Geral
 Este projeto visa identificar, em tempo real, quaisquer emissões de ruídos sonoros, em um determinado ambiente. As informações são armazenadas em banco de dados (DynamoDB), sendo possível ter a visualização completa. O sistema é composto por três conjuntos principais:
 
     Publicação de Dados via MQTT:
@@ -18,7 +18,7 @@ Este projeto visa identificar, em tempo real, quaisquer emissões de ruídos son
 
 O código completo pode ser visualizado atráves do link abaixo: Código ESP32 - https://github.com/LeonardoCupari/sensorsom/blob/main/sketch_oct18a.ino
 
-Componentes e Infraestrutura Utilizada
+# Componentes e Infraestrutura Utilizada
 Módulo Detector Sensor de Som Palmas LM393
 ESP32
 Protocolo de comunicação MQTT
@@ -30,7 +30,7 @@ Node-Red - Flow
 ![image](https://github.com/user-attachments/assets/21e5d03f-ea81-47e1-bb90-875ddd1f7835)
 ![image](https://github.com/user-attachments/assets/82910b12-3925-459d-b7b0-3dafe245ecbd)
 
-Node-Red - UI
+# Node-Red - UI
 http://ec2-3-145-147-198.us-east-2.compute.amazonaws.com:1880/ui/#!/0?socketid=UZFvOcEpKWhqXkSQAAAX
 
 Monitoramento em tempo real via MQTT
@@ -40,7 +40,7 @@ Dados coletados e armazenados no banco de dados DynamoDB
 ![image](https://github.com/user-attachments/assets/cf072500-4a11-435e-a430-7b6de377a5c0)
 Legenda: 0 para não identificação de som e 1 para identificado som
 
-Simulação Wokwi
+# Simulação Wokwi
 
 Os circuitos estão simulados na plataforma Wokwi e podem ser acessados através do link abaixo: https://wokwi.com/projects/412763205132126209
 
