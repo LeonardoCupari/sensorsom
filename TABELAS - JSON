@@ -1,0 +1,205 @@
+[
+    {
+        "id": "addff0fef152fee2",
+        "type": "tab",
+        "label": "Tabela",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e198f13f77161141",
+        "type": "ui_table",
+        "z": "addff0fef152fee2",
+        "group": "28a034ab.aeaf6c",
+        "name": "Tabela de Histórico de Monitoramento",
+        "order": 0,
+        "width": "7",
+        "height": "8",
+        "columns": [
+            {
+                "field": "Sensor_ID",
+                "title": "Sensor_ID",
+                "width": "30",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Timestamp",
+                "title": "Timestamp",
+                "width": "30",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Valor",
+                "title": "Valor",
+                "width": "30",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 890,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "33a50810cae2a106",
+        "type": "function",
+        "z": "addff0fef152fee2",
+        "name": "Preparar Dados para Tabela",
+        "func": "// Exemplo de dados retornados pelo Query\nconst items = msg.payload.Items;  // Lista de itens do Query\n\n// Preparar os dados para a tabela\nconst tableData = items.map(item => ({\n    Sensor_ID: item.Sensor_ID.S,\n    Timestamp: item.Timestamp.S,\n    Valor: item.Valor.N\n})).slice(0, 25);  // Limitar a 25 itens\n\n// Definir o payload para enviar para a tabela\nmsg.payload = tableData; // Aqui você coloca os dados limitados diretamente no payload\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 160,
+        "wires": [
+            [
+                "e198f13f77161141",
+                "231364e3b487cf3a"
+            ]
+        ]
+    },
+    {
+        "id": "b4f4921b070c4d67",
+        "type": "AWS DynamoDB",
+        "z": "addff0fef152fee2",
+        "aws": "8b84c11377d060af",
+        "operation": "Scan",
+        "Statements": "",
+        "RequestItems": "",
+        "TableName": "Sensor_Som",
+        "BackupName": "",
+        "GlobalTableName": "",
+        "ReplicationGroup": "",
+        "AttributeDefinitions": "",
+        "KeySchema": "",
+        "BackupArn": "",
+        "Key": "",
+        "ExportArn": "",
+        "Statement": "",
+        "TransactStatements": "",
+        "TableArn": "",
+        "S3Bucket": "",
+        "ResourceArn": "",
+        "Item": "",
+        "TargetTableName": "",
+        "Tags": "",
+        "TransactItems": "",
+        "TagKeys": "",
+        "PointInTimeRecoverySpecification": "",
+        "ContributorInsightsAction": "",
+        "ReplicaUpdates": "",
+        "TimeToLiveSpecification": "",
+        "name": "",
+        "x": 310,
+        "y": 160,
+        "wires": [
+            [
+                "33a50810cae2a106",
+                "afd88fc089e6e0bc"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "abbdae19465a04eb",
+        "type": "inject",
+        "z": "addff0fef152fee2",
+        "name": "Atualizar Tabela",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "b4f4921b070c4d67"
+            ]
+        ]
+    },
+    {
+        "id": "231364e3b487cf3a",
+        "type": "debug",
+        "z": "addff0fef152fee2",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "afd88fc089e6e0bc",
+        "type": "debug",
+        "z": "addff0fef152fee2",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "28a034ab.aeaf6c",
+        "type": "ui_group",
+        "name": "Sensor ruído",
+        "tab": "e0cae9807f88480d",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false
+    },
+    {
+        "id": "8b84c11377d060af",
+        "type": "amazon config",
+        "name": "AWS",
+        "region": "us-east-2",
+        "proxyRequired": false,
+        "proxy": ""
+    },
+    {
+        "id": "e0cae9807f88480d",
+        "type": "ui_tab",
+        "name": "Interface do Usuário",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
