@@ -1,12 +1,11 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 
-// Configurações de Wi-Fi
-const char* ssid = "iPhone de Leonardo";
-const char* password = "leo12345";
+// Configurações de "Leonardo";
+const char* password = "!Rossi123";
 
 // Configurações do servidor MQTT
-const char* mqtt_server = "18.219.56.144";  // IP do seu broker MQTT
+const char* mqtt_server = "3.145.147.198";  // IP do seu broker MQTT
 const int mqtt_port = 1883;                 // Porta do broker MQTT
 const char* mqtt_topic = "sensor/som";      // Tópico onde os dados serão publicados
 
