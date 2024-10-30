@@ -25,8 +25,7 @@ Protocolo de comunicação MQTT
 Node-Red (Back-end e Front-End) hospedado na AWS
 Banco de Dados - AWS DynamoDB
 
-
-Node-Red - Flow
+# Node-Red - Flow
 ![image](https://github.com/user-attachments/assets/21e5d03f-ea81-47e1-bb90-875ddd1f7835)
 ![image](https://github.com/user-attachments/assets/82910b12-3925-459d-b7b0-3dafe245ecbd)
 
@@ -39,6 +38,10 @@ Monitoramento em tempo real via MQTT
 Dados coletados e armazenados no banco de dados DynamoDB
 ![image](https://github.com/user-attachments/assets/cf072500-4a11-435e-a430-7b6de377a5c0)
 Legenda: 0 para não identificação de som e 1 para identificado som
+
+# JSONs
+https://github.com/LeonardoCupari/sensorsom/blob/main/ESP32%20-%20JSON
+https://github.com/LeonardoCupari/sensorsom/blob/main/TABELAS%20-%20JSON
 
 # Simulação Wokwi
 
