@@ -38,8 +38,10 @@ Monitoramento em tempo real via MQTT
 
 Dados coletados e armazenados no banco de dados DynamoDB
 ![image](https://github.com/user-attachments/assets/cf072500-4a11-435e-a430-7b6de377a5c0)
+Legenda: 0 para não identificação de som e 1 para identificado som
 
 Simulação Wokwi
+
 Os circuitos estão simulados na plataforma Wokwi e podem ser acessados através do link abaixo: https://wokwi.com/projects/412763205132126209
 
 Simulação da elaboração, com sensor de presença (adaptado), visto que não encontramos a opção de som a qual compramos fisicamente.
